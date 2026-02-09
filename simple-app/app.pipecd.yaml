@@ -14,7 +14,6 @@ spec:
     recreate: false
   pipeline:
     stages:
-      - id: ecs-sync-stage
-        name: ECS_SYNC
+      - name: ECS_SYNC
   description: |
     Simple ECS Plugin Demo Application
