@@ -1,0 +1,20 @@
+cluster: arn:aws:ecs:us-east-1:992382718026:cluster/pipecd-ecs-test-cluster
+serviceName: pipecd-ecs-test
+desiredCount: 2
+deploymentConfiguration:
+  maximumPercent: 200
+  minimumHealthyPercent: 0
+schedulingStrategy: REPLICA
+deploymentController:
+  type: EXTERNAL
+enableECSManagedTags: true
+propagateTags: SERVICE
+launchType: FARGATE
+networkConfiguration:
+  awsvpcConfiguration:
+    assignPublicIp: ENABLED
+    securityGroups:
+      - sg-0a17a054155fe56de
+    subnets:
+      - subnet-06ad2d6513d48f198
+      - subnet-00293b69820d79561

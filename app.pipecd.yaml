@@ -1,0 +1,16 @@
+apiVersion: pipecd.dev/v1beta1
+kind: ECSApp
+spec:
+  name: simple-app
+  input:
+      service
+  labels:
+    env: demo
+    plugin: ecs
+  input:
+    serviceDefinitionFile: servicedef.yaml
+    taskDefintionFile: taskdef.yaml
+  quickSync:
+    recreate: false
+  description: |
+    Simple ECS Plugin Demo Application
