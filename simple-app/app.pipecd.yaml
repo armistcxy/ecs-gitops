@@ -1,5 +1,5 @@
 apiVersion: pipecd.dev/v1beta1
-kind: ECSApp
+kind: Application
 spec:
   name: simple-app
   input:
