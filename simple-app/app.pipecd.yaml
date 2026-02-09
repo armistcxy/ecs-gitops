@@ -2,16 +2,19 @@ apiVersion: pipecd.dev/v1beta1
 kind: Application
 spec:
   name: simple-app
+  plugin: ecs
+  deployTarget: ecs-dev
   labels:
     env: demo
     plugin: ecs
   input:
     serviceDefinitionFile: servicedef.yaml
-    taskDefintionFile: taskdef.yaml
+    taskDefinitionFile: taskdef.yaml
   quickSync:
     recreate: false
   pipeline:
     stages:
-      - name: ECS_SYNC
+      - id: ecs-sync-stage
+        name: ECS_SYNC
   description: |
     Simple ECS Plugin Demo Application
