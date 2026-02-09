@@ -1,7 +1,7 @@
 apiVersion: pipecd.dev/v1beta1
 kind: Application
 spec:
-  name: simple-app
+  name: ecs-test-app
   plugin: ecs
   deployTarget: ecs-dev
   labels:
