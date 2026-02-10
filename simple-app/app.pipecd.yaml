@@ -8,8 +8,8 @@ spec:
     env: demo
     plugin: ecs
   input:
-    serviceDefinitionFile: servicedef.yaml
     taskDefinitionFile: taskdef.yaml
+    serviceDefinitionFile: servicedef.yaml
   quickSync:
     recreate: false
   pipeline:
