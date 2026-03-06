@@ -1,5 +1,5 @@
 cluster: arn:aws:ecs:us-east-1:992382718026:cluster/pipecd-ecs-test-cluster
-serviceName: pipecd-ecs-test
+serviceName: ecs-service-test
 desiredCount: 2
 deploymentConfiguration:
   maximumPercent: 200
