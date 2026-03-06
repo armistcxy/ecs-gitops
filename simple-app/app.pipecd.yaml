@@ -13,7 +13,7 @@ spec:
         serviceDefinitionFile: servicedef.yaml
         taskDefinitionFile: taskdef.yaml
       quickSync:
-        recreate: false
+        recreate: true
   pipeline:
     stages:
       - name: ECS_SYNC
