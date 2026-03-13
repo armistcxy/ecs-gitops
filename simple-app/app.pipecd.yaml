@@ -10,7 +10,7 @@ spec:
   plugins:
     ecs:
       input:
-        serviceDefinitionFile: servicedef.yaml
+        # serviceDefinitionFile: servicedef.yaml
         taskDefinitionFile: taskdef.yaml
         clusterArn: arn:aws:ecs:us-east-1:992382718026:cluster/pipecd-ecs-test-cluster
         awsvpcConfiguration:
