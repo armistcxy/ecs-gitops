@@ -18,6 +18,7 @@ spec:
             - subnet-06ad2d6513d48f198
           securityGroups:
             - sg-0a17a054155fe56de
+        runStandaloneTask: true
       quickSync:
         recreate: true
   pipeline:
