@@ -10,8 +10,14 @@ spec:
   plugins:
     ecs:
       input:
-        serviceDefinitionFile: servicedef.yaml
+        # serviceDefinitionFile: servicedef.yaml
         taskDefinitionFile: taskdef.yaml
+        clusterArn: arn:aws:ecs:us-east-1:992382718026:cluster/pipecd-ecs-test-cluster
+        awsvpcConfiguration:
+          subnets:
+            - subnet-06ad2d6513d48f198
+          securityGroups:
+            - sg-0a17a054155fe56de
       quickSync:
         recreate: true
   pipeline:
