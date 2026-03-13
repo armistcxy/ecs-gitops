@@ -10,7 +10,7 @@ spec:
   plugins:
     ecs:
       input:
-        # serviceDefinitionFile: servicedef.yaml
+        serviceDefinitionFile: servicedef.yaml
         taskDefinitionFile: taskdef.yaml
         clusterArn: arn:aws:ecs:us-east-1:992382718026:cluster/pipecd-ecs-test-cluster
         awsvpcConfiguration:
@@ -25,7 +25,9 @@ spec:
         recreate: true
   pipeline:
     stages:
-      - name: ECS_SYNC
+      - name: ECS_CANARY_ROLLOUT
+        with:
+          scale: 50
   description: |
     Simple ECS Plugin Demo Application
 
