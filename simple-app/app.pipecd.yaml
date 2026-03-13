@@ -19,6 +19,7 @@ spec:
           securityGroups:
             - sg-0a17a054155fe56de
         runStandaloneTask: true
+        launchType: FARGATE
       quickSync:
         recreate: true
   pipeline:
