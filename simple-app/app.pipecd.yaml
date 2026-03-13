@@ -20,6 +20,7 @@ spec:
           securityGroups:
             - sg-0a17a054155fe56de
         runStandaloneTask: true
+        accessType: SERVICE_DISCOVERY
       quickSync:
         recreate: true
   pipeline:
