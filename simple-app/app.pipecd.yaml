@@ -23,6 +23,8 @@ spec:
         accessType: SERVICE_DISCOVERY
       quickSync:
         recreate: true
+  planner:
+    autoRollback: false
   pipeline:
     rollback: false
     stages:
