@@ -14,6 +14,7 @@ spec:
         taskDefinitionFile: taskdef.yaml
         clusterArn: arn:aws:ecs:us-east-1:992382718026:cluster/pipecd-ecs-test-cluster
         awsvpcConfiguration:
+          assignPublicIp: true
           subnets:
             - subnet-06ad2d6513d48f198
           securityGroups:
