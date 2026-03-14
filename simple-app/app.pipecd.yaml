@@ -28,9 +28,7 @@ spec:
   pipeline:
     rollback: false
     stages:
-      - name: ECS_CANARY_ROLLOUT
-        with:
-          scale: 50
+      - name: ECS_PRIMARY_ROLLOUT
   description: |
     Simple ECS Plugin Demo Application
 
