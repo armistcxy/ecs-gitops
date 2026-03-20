@@ -29,8 +29,6 @@ spec:
     rollback: false
     stages:
       - name: ECS_PRIMARY_ROLLOUT
-        with:
-          removeOldTaskSets: true
   description: |
     Simple ECS Plugin Demo Application
 
