@@ -9,6 +9,7 @@ containerDefinitions:
     name: web
     portMappings:
       - containerPort: 80
+      - containerPort: 8080
 compatibilities:
 - FARGATE
 requiresCompatibilities:
