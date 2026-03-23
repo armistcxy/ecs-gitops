@@ -37,9 +37,9 @@ spec:
   pipeline:
     rollback: false
     stages:
-      - name: ECS_CANARY_ROLLOUT 
+      - name: ECS_TRAFFIC_ROUTING
         with:
-          scale: 50
+          canary: 50
   description: |
     Simple ECS Plugin Demo Application
 
