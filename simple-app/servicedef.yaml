@@ -9,7 +9,7 @@ tags:
   - key: "Project"
     value: "PipeCD-POC"
 deploymentConfiguration:
-  maximumPercent: 200
+  maximumPercent: 400
   minimumHealthyPercent: 0
 schedulingStrategy: REPLICA
 deploymentController:

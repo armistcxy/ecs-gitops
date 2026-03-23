@@ -2,9 +2,9 @@ family: pipecd-ecs-test
 executionRoleArn: arn:aws:iam::992382718026:role/ECSTaskExecutionRole
 containerDefinitions:
   - command: null
-    cpu: 100
-    image: 992382718026.dkr.ecr.us-east-1.amazonaws.com/traffic-test:v2
-    memory: 100
+    cpu: 300
+    image: 992382718026.dkr.ecr.us-east-1.amazonaws.com/traffic-test:v1
+    memory: 200
     mountPoints: []
     name: web
     portMappings:
