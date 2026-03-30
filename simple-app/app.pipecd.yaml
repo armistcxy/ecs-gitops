@@ -22,11 +22,11 @@ spec:
         accessType: ELB
         targetGroups:
           primary:
-            targetGroupArn: arn:aws:elasticloadbalancing:us-east-1:992382718026:targetgroup/primary-tg/772b46de7f9d1efd
+            targetGroupArn: arn:aws:elasticloadbalancing:us-east-1:992382718026:targetgroup/primary-tg/772b46de7f9d1efd            
             containerName: web
             containerPort: 8080
           canary:
-            targetGroupArn: arn:aws:elasticloadbalancing:us-east-1:992382718026:targetgroup/canary-tg/32990d37bf7fa074
+            targetGroupArn: arn:aws:elasticloadbalancing:us-east-1:992382718026:targetgroup/canary-tg/32990d37bf7fa074 
             containerName: web 
             containerPort: 8080
       quickSync:
@@ -36,16 +36,23 @@ spec:
   pipeline:
     rollback: false
     stages:
+      - name: ECS_CANARY_ROLLOUT
+        with:
+          scale: 50
+      - name: ECS_TRAFFIC_ROUTING
+        with:
+          canary: 20
       - name: WAIT_APPROVAL
         with:
           approvers:
             - hello-pipecd
           minApproveNum: 1
           timeout: 2h
+      - name: ECS_PRIMARY_ROLLOUT
       - name: ECS_TRAFFIC_ROUTING
         with:
-          canary: 50
-     
+          primary: 100
+      - name: ECS_CANARY_CLEAN
   description: |
     Simple ECS Plugin Demo Application
 
