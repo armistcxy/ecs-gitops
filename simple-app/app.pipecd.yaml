@@ -39,6 +39,13 @@ spec:
       - name: ECS_TRAFFIC_ROUTING
         with:
           canary: 50
+      - name: WAIT_APPROVAL
+        with:
+          approvers:
+            - hello-pipecd
+          minApproveNum: 1
+          timeout: 2h
+      - name: ECS_CANARY_CLEAN
   description: |
     Simple ECS Plugin Demo Application
 
