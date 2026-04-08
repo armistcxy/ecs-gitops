@@ -15,7 +15,7 @@ schedulingStrategy: REPLICA
 deploymentController:
   type: EXTERNAL
 enableECSManagedTags: true
-# propagateTags: SERVICE
+propagateTags: TASK_DEFINITION
 launchType: FARGATE
 networkConfiguration:
   awsvpcConfiguration:
