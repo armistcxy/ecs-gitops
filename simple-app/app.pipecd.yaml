@@ -12,13 +12,14 @@ spec:
       input:
         serviceDefinitionFile: servicedef.yaml
         taskDefinitionFile: taskdef.yaml
-        clusterArn: arn:aws:ecs:us-east-1:992382718026:cluster/pipecd-ecs-test-cluster
-        awsvpcConfiguration:
-          assignPublicIp: ENABLED
-          subnets:
-            - subnet-06ad2d6513d48f198
-          securityGroups:
-            - sg-0a17a054155fe56de
+        standAloneOption:
+          clusterArn: arn:aws:ecs:us-east-1:992382718026:cluster/pipecd-ecs-test-cluster
+          awsvpcConfiguration:
+            assignPublicIp: ENABLED
+            subnets:
+              - subnet-06ad2d6513d48f198
+            securityGroups:
+              - sg-0a17a054155fe56de
         accessType: ELB
         targetGroups:
           primary:
