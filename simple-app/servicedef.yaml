@@ -11,6 +11,9 @@ tags:
 deploymentConfiguration:
   maximumPercent: 200
   minimumHealthyPercent: 0
+  deploymentCircuitBreaker:
+    enable: true
+    rollback: true
 schedulingStrategy: REPLICA
 deploymentController:
   type: EXTERNAL
@@ -25,11 +28,4 @@ networkConfiguration:
     subnets:
       - subnet-06ad2d6513d48f198
       - subnet-00293b69820d79561
-serviceConnectConfiguration:
-  enabled: true
-  namespace: my-app.local
-  services:
-    - portName: http
-      clientAliases:
-        - port: 80
-          dnsName: my-app
+
