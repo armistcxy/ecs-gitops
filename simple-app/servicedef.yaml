@@ -29,7 +29,7 @@ serviceConnectConfiguration:
   enabled: true
   namespace: my-app.local
   services:
-    - portMappingName: http
+    - portName: http
       clientAliases:
         - port: 80
           dnsName: my-app
