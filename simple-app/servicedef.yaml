@@ -11,7 +11,7 @@ tags:
 deploymentConfiguration:
   maximumPercent: 200
   minimumHealthyPercent: 0
-  deploymentStrategy: ROLLING
+  deploymentStrategy: BLUE_GREEN
 schedulingStrategy: REPLICA
 deploymentController:
   type: ECS
