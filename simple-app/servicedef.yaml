@@ -23,7 +23,7 @@ loadBalancers:
     advancedConfiguration:
       alternateTargetGroupArn: arn:aws:elasticloadbalancing:us-east-1:992382718026:targetgroup/canary-tg/32990d37bf7fa074
       productionListenerRule: arn:aws:elasticloadbalancing:us-east-1:992382718026:listener-rule/app/ecs-traffic-test-alb/93c286ca35c9e922/26b3f55565a5a90c/28129675660cd3af 
-      roleArn: arn:aws:iam::992382718026:role/CodeDeployFullALBAccessRole
+      roleArn: arn:aws:iam::992382718026:role/ECSServiceFullALBRole
 schedulingStrategy: REPLICA
 deploymentController:
   type: ECS
