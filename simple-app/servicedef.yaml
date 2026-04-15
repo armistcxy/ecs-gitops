@@ -1,6 +1,6 @@
 cluster: arn:aws:ecs:us-east-1:992382718026:cluster/pipecd-ecs-test-cluster
 serviceName: ecs-sv-app
-desiredCount: 2
+desiredCount: 1
 tags:
   - key: "Environment"
     value: "test"
