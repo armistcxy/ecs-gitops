@@ -13,6 +13,9 @@ deploymentConfiguration:
   minimumHealthyPercent: 0
   deploymentStrategy: BLUE_GREEN
   bakeTimeInMinutes: 2
+  deploymentCircuitBreaker:
+    enable: true
+    rollback: true
 schedulingStrategy: REPLICA
 deploymentController:
   type: ECS
