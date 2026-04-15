@@ -12,6 +12,7 @@ deploymentConfiguration:
   maximumPercent: 200
   minimumHealthyPercent: 0
   deploymentStrategy: BLUE_GREEN
+  bakeTimeInMinutes: 2
 schedulingStrategy: REPLICA
 deploymentController:
   type: ECS
