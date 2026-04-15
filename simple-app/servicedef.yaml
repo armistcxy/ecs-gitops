@@ -1,5 +1,5 @@
 cluster: arn:aws:ecs:us-east-1:992382718026:cluster/pipecd-ecs-test-cluster
-serviceName: ecs-sv
+serviceName: ecs-sv-app
 desiredCount: 2
 tags:
   - key: "Environment"
@@ -11,9 +11,10 @@ tags:
 deploymentConfiguration:
   maximumPercent: 200
   minimumHealthyPercent: 0
+  deploymentStrategy: ROLLING
 schedulingStrategy: REPLICA
 deploymentController:
-  type: EXTERNAL
+  type: ECS
 enableECSManagedTags: true
 propagateTags: TASK_DEFINITION
 launchType: FARGATE
