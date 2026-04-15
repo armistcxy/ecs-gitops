@@ -11,9 +11,6 @@ tags:
 deploymentConfiguration:
   maximumPercent: 200
   minimumHealthyPercent: 0
-  deploymentCircuitBreaker:
-    enable: true
-    rollback: true
 schedulingStrategy: REPLICA
 deploymentController:
   type: EXTERNAL
