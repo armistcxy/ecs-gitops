@@ -11,7 +11,7 @@ tags:
 deploymentConfiguration:
   maximumPercent: 200
   minimumHealthyPercent: 0
-  strategy: BLUE_GREEN
+  strategy: CANARY
   bakeTimeInMinutes: 2
   deploymentCircuitBreaker:
     enable: true
@@ -30,4 +30,3 @@ networkConfiguration:
     subnets:
       - subnet-06ad2d6513d48f198
       - subnet-00293b69820d79561
-
