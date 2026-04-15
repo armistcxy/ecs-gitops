@@ -11,7 +11,7 @@ tags:
 deploymentConfiguration:
   maximumPercent: 200
   minimumHealthyPercent: 0
-  deploymentStrategy: BLUE_GREEN
+  strategy: BLUE_GREEN
   bakeTimeInMinutes: 2
   deploymentCircuitBreaker:
     enable: true
