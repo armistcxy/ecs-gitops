@@ -22,7 +22,7 @@ loadBalancers:
     targetGroupArn: arn:aws:elasticloadbalancing:us-east-1:992382718026:targetgroup/primary-tg/772b46de7f9d1efd
     advancedConfiguration:
       alternateTargetGroupArn: arn:aws:elasticloadbalancing:us-east-1:992382718026:targetgroup/canary-tg/32990d37bf7fa074
-      productionListenerRule: arn:aws:elasticloadbalancing:us-east-1:992382718026:listener-rule/app/ecs-traffic-test-alb/93c286ca35c9e922/26b3f55565a5a90c/28129675660cd3af 
+      productionListenerRule: arn:aws:elasticloadbalancing:us-east-1:992382718026:listener-rule/app/ecs-traffic-test-alb/0b811bd932cc09d0/f4fd2b5c8f5a0580/dba78df82cf75d24
       roleArn: arn:aws:iam::992382718026:role/ECSServiceFullALBRole
 schedulingStrategy: REPLICA
 deploymentController:
