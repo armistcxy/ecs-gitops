@@ -16,6 +16,9 @@ deploymentConfiguration:
   deploymentCircuitBreaker:
     enable: true
     rollback: true
+  canaryConfiguration:
+    canaryBakeTimeInMinutes: 2
+    canaryPercent: 0.4
 loadBalancers:
   - containerName: web
     containerPort: 8080
