@@ -18,7 +18,7 @@ deploymentConfiguration:
     rollback: true
   canaryConfiguration:
     canaryBakeTimeInMinutes: 2
-    canaryPercent: 0.4
+    canaryPercent: 40
 loadBalancers:
   - containerName: web
     containerPort: 8080
