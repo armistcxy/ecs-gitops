@@ -4,29 +4,13 @@ desiredCount: 1
 tags:
   - key: "Environment"
     value: "test"
-  - key: "Team"
-    value: "DevOps"
-  - key: "Project"
-    value: "PipeCD-POC"
 deploymentConfiguration:
   maximumPercent: 200
   minimumHealthyPercent: 0
-  strategy: CANARY
-  bakeTimeInMinutes: 2
+  strategy: LINEAR
   deploymentCircuitBreaker:
     enable: true
     rollback: true
-  canaryConfiguration:
-    canaryBakeTimeInMinutes: 2
-    canaryPercent: 40
-loadBalancers:
-  - containerName: web
-    containerPort: 8080
-    targetGroupArn: arn:aws:elasticloadbalancing:us-east-1:992382718026:targetgroup/primary-tg/772b46de7f9d1efd
-    advancedConfiguration:
-      alternateTargetGroupArn: arn:aws:elasticloadbalancing:us-east-1:992382718026:targetgroup/canary-tg/32990d37bf7fa074
-      productionListenerRule: arn:aws:elasticloadbalancing:us-east-1:992382718026:listener-rule/app/ecs-traffic-test-alb/f329ae3f25e476d1/0e641c2a8251ce30/57f80e1deb3d40f9
-      roleArn: arn:aws:iam::992382718026:role/ECSServiceFullALBRole
 schedulingStrategy: REPLICA
 deploymentController:
   type: ECS
