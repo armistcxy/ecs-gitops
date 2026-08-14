@@ -8,7 +8,7 @@ tags:
 deploymentConfiguration:
   maximumPercent: 200
   minimumHealthyPercent: 0
-  strategy: LINEAR
+  strategy: ROLLING
   deploymentCircuitBreaker:
     enable: true
     rollback: true
