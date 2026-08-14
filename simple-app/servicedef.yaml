@@ -1,5 +1,6 @@
 cluster: arn:aws:ecs:us-east-1:992382718026:cluster/pipecd-ecs-test-cluster
 serviceName: ecs-sv-test
+taskDefinition: pipecd-ecs-test
 desiredCount: 1
 tags:
   - key: "Environment"
