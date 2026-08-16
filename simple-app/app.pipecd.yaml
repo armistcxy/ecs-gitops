@@ -12,6 +12,8 @@ spec:
       input:
         serviceDefinitionFile: servicedef.yaml
         taskDefinitionFile: taskdef.yaml
+  planner:
+    autoRollback: false # disable auto adding rollback stage for each deployment
   pipeline:
     stages:
       - name: ECS_SYNC
