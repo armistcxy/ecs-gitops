@@ -15,7 +15,7 @@ deploymentConfiguration:
   # bakeTimeInMinutes: 2 # time when blue + green both exist after 100% traffic direct to green
   deploymentCircuitBreaker:
     enable: true
-    rollback: true
+    rollback: false
     thresholdConfiguration:
       type: COUNT
       value: 1
