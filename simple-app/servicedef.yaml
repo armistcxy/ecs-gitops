@@ -11,8 +11,8 @@ deploymentConfiguration:
   strategy: CANARY
   canaryConfiguration:
     canaryPercent: 20.0
-    canaryBakeTimeInMinutes: 5
-  bakeTimeInMinutes: 5 # time when blue + green both exist after 100% traffic direct to green
+    canaryBakeTimeInMinutes: 2
+  bakeTimeInMinutes: 1 # time when blue + green both exist after 100% traffic direct to green
   deploymentCircuitBreaker:
     enable: true
     rollback: true
