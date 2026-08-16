@@ -32,7 +32,7 @@ networkConfiguration:
       - subnet-00293b69820d79561
 loadBalancers:
   - targetGroupArn: arn:aws:elasticloadbalancing:us-east-1:992382718026:targetgroup/ecs-canary-blue/becc353a8e09cbec
-    containerName: app
+    containerName: web
     containerPort: 8080
     advancedConfiguration:
       alternateTargetGroupArn: arn:aws:elasticloadbalancing:us-east-1:992382718026:targetgroup/ecs-canary-green/266366f2f3e71d03
