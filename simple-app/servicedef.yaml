@@ -13,9 +13,9 @@ deploymentConfiguration:
   #   canaryPercent: 20.0
   #   canaryBakeTimeInMinutes: 2
   # bakeTimeInMinutes: 2 # time when blue + green both exist after 100% traffic direct to green
-  # deploymentCircuitBreaker:
-  #   enable: true
-  #   rollback: true
+  deploymentCircuitBreaker:
+    enable: true
+    rollback: true
   # add hook into POST_TEST_TRAFFIC_SHIFT for external validation
   # lifecycleHooks:
   #   - lifecycleStages:
