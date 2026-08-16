@@ -16,6 +16,9 @@ deploymentConfiguration:
   deploymentCircuitBreaker:
     enable: true
     rollback: true
+    thresholdConfiguration:
+      type: COUNT
+      value: 1
   # add hook into POST_TEST_TRAFFIC_SHIFT for external validation
   # lifecycleHooks:
   #   - lifecycleStages:
