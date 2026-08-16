@@ -21,8 +21,9 @@ deploymentConfiguration:
     - lifecycleStages:
         - POST_TEST_TRAFFIC_SHIFT
       targetType: PAUSE
-      hookDetails:
-        timeoutInMinutes: "2"
+      timeoutConfiguration:
+        timeoutInMinutes: 2
+        action: ROLLBACK
 schedulingStrategy: REPLICA
 deploymentController:
   type: ECS
