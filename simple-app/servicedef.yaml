@@ -8,22 +8,22 @@ tags:
 deploymentConfiguration:
   maximumPercent: 200
   minimumHealthyPercent: 0
-  strategy: CANARY
-  canaryConfiguration:
-    canaryPercent: 20.0
-    canaryBakeTimeInMinutes: 2
-  bakeTimeInMinutes: 2 # time when blue + green both exist after 100% traffic direct to green
-  deploymentCircuitBreaker:
-    enable: true
-    rollback: true
+  strategy: ROLLING
+  # canaryConfiguration:
+  #   canaryPercent: 20.0
+  #   canaryBakeTimeInMinutes: 2
+  # bakeTimeInMinutes: 2 # time when blue + green both exist after 100% traffic direct to green
+  # deploymentCircuitBreaker:
+  #   enable: true
+  #   rollback: true
   # add hook into POST_TEST_TRAFFIC_SHIFT for external validation
-  lifecycleHooks:
-    - lifecycleStages:
-        - POST_TEST_TRAFFIC_SHIFT
-      targetType: PAUSE
-      timeoutConfiguration:
-        timeoutInMinutes: 2
-        action: ROLLBACK
+  # lifecycleHooks:
+  #   - lifecycleStages:
+  #       - POST_TEST_TRAFFIC_SHIFT
+  #     targetType: PAUSE
+  #     timeoutConfiguration:
+  #       timeoutInMinutes: 2
+  #       action: ROLLBACK
 schedulingStrategy: REPLICA
 deploymentController:
   type: ECS
