@@ -3,7 +3,7 @@ executionRoleArn: arn:aws:iam::992382718026:role/ECSTaskExecutionRole
 containerDefinitions:
   - command: null
     cpu: 100
-    image: 992382718026.dkr.ecr.us-east-1.amazonaws.com/go-ecs-lab:v1
+    image: 992382718026.dkr.ecr.us-east-1.amazonaws.com/go-ecs-lab:v2
     memory: 100
     mountPoints: []
     name: web
