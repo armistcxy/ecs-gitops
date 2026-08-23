@@ -1,5 +1,5 @@
 cluster: arn:aws:ecs:us-east-1:992382718026:cluster/pipecd-ecs-test-cluster
-serviceName: ecs-service
+serviceName: ecs-service-test
 taskDefinition: pipecd-ecs-test
 desiredCount: 2
 tags:
