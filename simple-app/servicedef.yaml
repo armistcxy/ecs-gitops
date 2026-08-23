@@ -13,12 +13,12 @@ deploymentConfiguration:
   #   canaryPercent: 20.0
   #   canaryBakeTimeInMinutes: 2
   # bakeTimeInMinutes: 2 # time when blue + green both exist after 100% traffic direct to green
-  deploymentCircuitBreaker:
-    enable: true
-    rollback: false
-    thresholdConfiguration:
-      type: COUNT
-      value: 1
+  # deploymentCircuitBreaker:
+  #   enable: true
+  #   rollback: false
+  #   thresholdConfiguration:
+  #     type: COUNT
+  #     value: 1
   # add hook into POST_TEST_TRAFFIC_SHIFT for external validation
   # lifecycleHooks:
   #   - lifecycleStages:
@@ -41,12 +41,12 @@ networkConfiguration:
     subnets:
       - subnet-06ad2d6513d48f198
       - subnet-00293b69820d79561
-loadBalancers:
-  - targetGroupArn: arn:aws:elasticloadbalancing:us-east-1:992382718026:targetgroup/ecs-canary-blue/becc353a8e09cbec
-    containerName: web
-    containerPort: 8080
-    advancedConfiguration:
-      alternateTargetGroupArn: arn:aws:elasticloadbalancing:us-east-1:992382718026:targetgroup/ecs-canary-green/266366f2f3e71d03
-      productionListenerRule: arn:aws:elasticloadbalancing:us-east-1:992382718026:listener-rule/app/ecs-canary-alb/a6fd20e4fadb24d3/cc2e25d098780ce6/3120791d16647f43
-      testListenerRule: arn:aws:elasticloadbalancing:us-east-1:992382718026:listener-rule/app/ecs-canary-alb/a6fd20e4fadb24d3/84a75d73f2336949/a11b028500e0f59d
-      roleArn: arn:aws:iam::992382718026:role/ecs-blue-green-role
+# loadBalancers:
+#   - targetGroupArn: arn:aws:elasticloadbalancing:us-east-1:992382718026:targetgroup/ecs-canary-blue/becc353a8e09cbec
+#     containerName: web
+#     containerPort: 8080
+#     advancedConfiguration:
+#       alternateTargetGroupArn: arn:aws:elasticloadbalancing:us-east-1:992382718026:targetgroup/ecs-canary-green/266366f2f3e71d03
+#       productionListenerRule: arn:aws:elasticloadbalancing:us-east-1:992382718026:listener-rule/app/ecs-canary-alb/a6fd20e4fadb24d3/cc2e25d098780ce6/3120791d16647f43
+#       testListenerRule: arn:aws:elasticloadbalancing:us-east-1:992382718026:listener-rule/app/ecs-canary-alb/a6fd20e4fadb24d3/84a75d73f2336949/a11b028500e0f59d
+#       roleArn: arn:aws:iam::992382718026:role/ecs-blue-green-role
